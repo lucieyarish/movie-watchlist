@@ -5,6 +5,9 @@
     font-family: 'Inter', sans-serif;
     /* Colors */
     --white: #FFF;
+    --black: #121212;
+    --grey-dark-1: #2E2E2F;
+    --grey-lighter: #A5A5A5;
 }
 
 /* --- TYPOGRAPHY --- */
@@ -30,13 +33,44 @@ a:active {
 .header {
     background-image: url("/assets/images/header-background.png"), linear-gradient(rgba(0, 0, 0, 0.877),rgba(0, 0, 0, 0.609));
     background-blend-mode: overlay;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
     background-size: cover;
     height: 18vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 2em;
+    position: relative;
 }
+
+/* --- MAIN SECTION --- */
+.main-container {
+    background: var(--black);
+    height: 100vh;
+}
+
+.header,
+.main-container {
+    padding: 0 2em;
+}
+
+input {
+    background-color: var(--grey-dark-1);
+}
+
+.user-search {
+    background-image: url("/assets/images/search-icon.png");
+    background-repeat: no-repeat;
+    background-position: 1em 0.7em;
+    padding: 0.7em 3em;
+    position: absolute;
+    top: 130px;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.875rem;
+    color: var(--grey-lighter);
+}
+
+.search-btn {
+    position: absolute;
+}
+
