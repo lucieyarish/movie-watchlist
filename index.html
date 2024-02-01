@@ -15,8 +15,14 @@
     </header>
     <main class="main-container">
         <section class="form-container">
-            <form class="form">
-                <input type="text" id="search-query" class="user-search" placeholder="Enter movie title" />
+            <form class="form" id="search-form">
+                <input 
+                    type="text" 
+                    id="search-query" 
+                    name="searchQuery" 
+                    class="user-search" 
+                    placeholder="Enter movie title"
+                    aria-label="Search query" />
                 <button type="submit" id="search-btn" class="search-btn">Search</button>
             </form>
         </section>
