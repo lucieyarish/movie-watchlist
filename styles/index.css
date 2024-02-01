@@ -48,6 +48,8 @@ a:active {
     background: var(--black);
     height: 100vh;
     position: relative;
+    display: flex;
+    flex-direction: column;
 }
 
 .header,
@@ -60,7 +62,6 @@ input {
 }
 
 /* --- FORM --- */
-
 .form-container {
     width: 95%;
     display: flex;
@@ -103,3 +104,14 @@ input {
     border-bottom-right-radius: 6px;
 }
 
+/* --- SEARCH RESULTS SECTION --- */
+.search-results {
+    margin: 13em auto;
+    text-align: center;
+    color: var(--grey-dark-1);
+}
+
+.info-text {
+    font-weight: 700;
+    margin: 0;
+}
