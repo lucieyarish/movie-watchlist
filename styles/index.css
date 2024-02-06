@@ -104,8 +104,8 @@ input {
     border-bottom-right-radius: 6px;
 }
 
-/* --- SEARCH RESULTS SECTION --- */
-.search-results {
+/* --- SEARCH RESULTS INIT --- */
+.earch-results-init {
     margin: 13em auto;
     text-align: center;
     color: var(--grey-dark-1);
@@ -114,4 +114,88 @@ input {
 .info-text {
     font-weight: 700;
     margin: 0;
+}
+
+/* --- SEARCH RESULTS --- */
+.movie-container {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    margin-top: 4em;
+}
+
+.movie-img {
+    max-width: 100px;
+}
+
+.movie-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.movie-header,
+.movie-details {
+    display: flex;
+    align-items: center;
+}
+
+.movie-header {
+    gap: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+.movie-title {
+    font-size: 1.125rem;
+    font-weight: 400;
+}
+
+.movie-rating-icon {
+    width: 13px;
+    height: 13px;
+}
+
+.movie-rating,
+.movie-details,
+.remove-btn {
+    font-size: 0.75rem;
+}
+
+.movie-rating {
+    padding-top: 0.2em;
+}
+
+.movie-details {
+    gap: 1em;
+}
+
+.remove-btn {
+    background: none;
+    color: var(--white);
+    border: none;
+    font-weight: 400;
+}
+
+.remove-icon {
+    background: var(--white);
+    border-radius: 50%;
+    color: var(--black);
+    padding: 0 0.4em 0.1em 0.4em;
+    font-weight: 800;
+    margin-right: 0.3em;
+}
+
+.movie-description {
+    margin-top: 0.5em;
+}
+
+.movie-description-text {
+    font-size: 0.875em;
+    color: var(--grey-lighter);
+    line-height: 1.3;
+}
+
+.read-more-btn {
+    background: none;
+    border: none;
+    color: var(--white);
 }
