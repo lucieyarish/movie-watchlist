@@ -105,7 +105,7 @@ input {
 }
 
 /* --- SEARCH RESULTS INIT --- */
-.earch-results-init {
+.search-result-init {
     margin: 13em auto;
     text-align: center;
     color: var(--grey-dark-1);
