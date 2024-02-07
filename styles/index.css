@@ -9,6 +9,7 @@
     --grey-dark-1: #2E2E2F;
     --grey-dark-2: #4B4B4B;
     --grey-lighter: #A5A5A5;
+    --grey-error: #787878;
 }
 
 /* --- TYPOGRAPHY --- */
@@ -104,8 +105,8 @@ input {
     border-bottom-right-radius: 6px;
 }
 
-/* --- SEARCH RESULTS INIT --- */
-.search-result-init {
+/* --- SEARCH RESULT NO DATA --- */
+.search-result-no-data {
     margin: 13em auto;
     text-align: center;
     color: var(--grey-dark-1);
@@ -114,6 +115,13 @@ input {
 .info-text {
     font-weight: 700;
     margin: 0;
+}
+
+.error-text {
+    color: var(--grey-error);
+    font-size: 1.125rem;
+    font-weight: 800;
+    padding: 0 3em;
 }
 
 /* --- SEARCH RESULTS --- */
@@ -156,7 +164,7 @@ input {
 
 .movie-rating,
 .movie-details,
-.remove-btn {
+.add-btn {
     font-size: 0.75rem;
 }
 
@@ -168,18 +176,18 @@ input {
     gap: 1em;
 }
 
-.remove-btn {
+.add-btn {
     background: none;
     color: var(--white);
     border: none;
     font-weight: 400;
 }
 
-.remove-icon {
+.add-icon {
     background: var(--white);
     border-radius: 50%;
     color: var(--black);
-    padding: 0 0.4em 0.1em 0.4em;
+    padding: 0.1em 0.4em 0.1em 0.4em;
     font-weight: 800;
     margin-right: 0.3em;
 }
