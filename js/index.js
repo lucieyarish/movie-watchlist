@@ -2,9 +2,10 @@ const searchForm = document.getElementById('search-form');
 const searchResultNoData = document.getElementById('search-result-no-data');
 const searchResult = document.getElementById('search-result');
 
-const renderMovie = (movie) => {
+const renderMovies = (movie) => {
   searchResultNoData.style.display = 'none';
 
+  //TODO: redo -> render list of movies, not just one movie
   const movieHtml = `
         <img class="movie-img" src="${movie.Poster}" alt="${movie.Title} movie poster">
         <div class="movie-info">
@@ -36,15 +37,32 @@ const renderErrorMsg = () => {
     `;
 };
 
-const getMovie = (searchQuery) => {
+const getMovies = (movieIds) => {
   const apiKey = 'c8afa8e';
-  fetch(`http://www.omdbapi.com/?t=${searchQuery}&apikey=${apiKey}`)
+  const movies = [];
+
+  movieIds.map((movieId) => {
+    fetch(`http://www.omdbapi.com/?i=${movieId}&apikey=${apiKey}`)
+      .then((res) => res.json())
+      .then((data) => movies.push(data));
+  });
+
+  return movies;
+};
+
+const getSearchResults = (searchQuery) => {
+  const apiKey = 'c8afa8e';
+  fetch(`http://www.omdbapi.com/?s=${searchQuery}&apikey=${apiKey}`)
     .then((res) => res.json())
     .then((data) => {
       if (data.Response === 'False') {
         renderErrorMsg();
       } else {
-        renderMovie(data);
+        const movieIds = data.Search.map((movie) => movie.imdbID);
+
+        const movies = getMovies(movieIds);
+
+        //TODO: call renderMovies function
       }
     })
     .catch((err) => {
@@ -58,7 +76,7 @@ searchForm.addEventListener('submit', function (e) {
   const formData = new FormData(searchForm);
   const searchQuery = formData.get('searchQuery');
 
-  getMovie(searchQuery);
+  getSearchResults(searchQuery);
 
   searchForm.reset();
 });
