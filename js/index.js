@@ -8,7 +8,7 @@ const renderMovies = (movies) => {
   const moviesTemplate = movies
     .map((movie) => {
       return `
-        <li>
+        <li class="movie-item">
             <article id="search-result" class="movie-container">
                 <img class="movie-img" src="${movie.Poster}" alt="${movie.Title} movie poster">
                 <div class="movie-info">
