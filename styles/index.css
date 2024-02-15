@@ -47,7 +47,7 @@ a:active {
 /* --- MAIN SECTION --- */
 .main-container {
     background: var(--black);
-    height: 100vh;
+    height: 100%;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -55,7 +55,7 @@ a:active {
 
 .header,
 .main-container {
-    padding: 0 2em;
+    padding: 0 2em 3em 2em;
 }
 
 input {
@@ -110,6 +110,7 @@ input {
     margin: 13em auto;
     text-align: center;
     color: var(--grey-dark-1);
+    height: 100vh;
 }
 
 .info-text {
